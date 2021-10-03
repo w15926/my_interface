@@ -18,10 +18,12 @@ public class InterceptorConfig implements WebMvcConfigurer {
     registry.addInterceptor(new JWTInterceeptors())
             .addPathPatterns("/**") // 此路径进行拦截器验证
             .excludePathPatterns( // 不包括某些路径
-                    "/user/login",
-                    "/user/register",
-                    "/user/modifyPwdByPwd",
-                    "/user/modifyPwdBySecretKey"
+                    // "/user/login",
+                    // "/user/register",
+                    // "/user/modifyPwdByPwd",
+                    // "/user/modifyPwdBySecretKey",
+                    "/user/**",
+                    "/carouselData"
             );
   }
 }
