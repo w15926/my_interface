@@ -9,5 +9,5 @@ import java.util.List;
 @Mapper
 public interface CarouselMapper {
   @Select("select * from carousel")
-  List<Carousel> carouselData();
+  List<Carousel> carousel();
 }

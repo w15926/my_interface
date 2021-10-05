@@ -1,23 +1,22 @@
 package com.my.my_interface.api;
 
 import com.my.my_interface.pkg.APIResult;
-import com.my.my_interface.service.CarouselService;
+import com.my.my_interface.service.CategoryItemsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class CarouselAPI {
+public class CategoryItemsAPI {
   @Autowired
-  private CarouselService service;
+  private CategoryItemsService service;
 
-  @PostMapping("/carousel")
-  public String carouselData() {
+  @PostMapping("/categoryItems")
+  public String categoryItems() {
     try {
-      return service.carousel();
+      System.out.println("21321312312312");
+      return service.categoryItems();
     } catch (Exception e) {
-      APIResult pkg = new APIResult();
       return new APIResult().getError("操作失败");
     }
   }

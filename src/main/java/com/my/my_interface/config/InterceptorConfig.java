@@ -23,7 +23,8 @@ public class InterceptorConfig implements WebMvcConfigurer {
                     // "/user/modifyPwdByPwd",
                     // "/user/modifyPwdBySecretKey",
                     "/user/**",
-                    "/carouselData"
+                    "/carousel",
+                    "/categoryItems"
             );
   }
 }

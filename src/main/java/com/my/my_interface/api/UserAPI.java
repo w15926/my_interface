@@ -26,8 +26,7 @@ public class UserAPI {
       String password = jo.getJSONObject("data").getString("password");
       return service.login(uname, password);
     } catch (Exception e) {
-      APIResult pkg = new APIResult();
-      return pkg.getError("操作失败");
+      return new APIResult().getError("操作失败");
     }
   }
 
@@ -54,8 +53,7 @@ public class UserAPI {
       String secretKey = jo.getJSONObject("data").getString("secretKey");
       return service.register(uname, pwd, secretKey);
     } catch (Exception e) {
-      APIResult pkg = new APIResult();
-      return pkg.getError("操作失败");
+      return new APIResult().getError("操作失败");
     }
   }
 
@@ -69,8 +67,7 @@ public class UserAPI {
       String newPwd = jo.getJSONObject("data").getString("newPassword");
       return service.modifyPwdByPwd(uname, pwd, newPwd);
     } catch (Exception e) {
-      APIResult pkg = new APIResult();
-      return pkg.getError("操作失败");
+      return new APIResult().getError("操作失败");
     }
   }
 
@@ -84,8 +81,7 @@ public class UserAPI {
       String secretKey = jo.getJSONObject("data").getString("secretKey");
       return service.modifyPwdBySecretKey(uname, newPwd, secretKey);
     } catch (Exception e) {
-      APIResult pkg = new APIResult();
-      return pkg.getError("操作失败");
+      return new APIResult().getError("操作失败");
     }
   }
 
@@ -97,8 +93,7 @@ public class UserAPI {
       String result = service.queryUser(uid);
       return result;
     } catch (Exception e) {
-      APIResult pkg = new APIResult();
-      return pkg.getError("操作失败");
+      return new APIResult().getError("操作失败");
     }
   }
 }
